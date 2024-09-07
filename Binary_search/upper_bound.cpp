@@ -2,7 +2,7 @@
 using namespace std;
 
 //in coding we will use function
-//int lb = lower_bound(arr.begin(),arr.end(),ele)-arr.begin();
+//int ub = upper_bound(arr.begin(),arr.end(),ele)-arr.begin();
 
 int solution(vector<int> &arr,int n,int tar){
     int low = 0;
@@ -10,7 +10,7 @@ int solution(vector<int> &arr,int n,int tar){
     int ans = n;
     while(low <= high){
         int mid = low + (high-low)/2;
-        if(arr[mid] >= tar){
+        if(arr[mid] > tar){
             ans = mid; 
             high=mid-1;
         }

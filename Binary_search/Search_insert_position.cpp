@@ -3,6 +3,7 @@ using namespace std;
 
 //in coding we will use function
 //int lb = lower_bound(arr.begin(),arr.end(),ele)-arr.begin();
+//it is just similar to lower bound problem
 
 int solution(vector<int> &arr,int n,int tar){
     int low = 0;

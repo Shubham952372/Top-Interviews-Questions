@@ -2,7 +2,8 @@
 using namespace std;
 
 //in coding we will use function
-//int lb = lower_bound(arr.begin(),arr.end(),ele)-arr.begin();
+//condition for ceil using binary search
+//smallest no.in array >= tar;
 
 int solution(vector<int> &arr,int n,int tar){
     int low = 0;
@@ -11,7 +12,7 @@ int solution(vector<int> &arr,int n,int tar){
     while(low <= high){
         int mid = low + (high-low)/2;
         if(arr[mid] >= tar){
-            ans = mid; 
+            ans =arr[mid]; 
             high=mid-1;
         }
         else {

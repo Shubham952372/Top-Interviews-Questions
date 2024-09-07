@@ -2,20 +2,21 @@
 using namespace std;
 
 //in coding we will use function
-//int lb = lower_bound(arr.begin(),arr.end(),ele)-arr.begin();
+//condition for floor in binary search
+//largest no in array <= target;
 
 int solution(vector<int> &arr,int n,int tar){
     int low = 0;
     int high = n-1;
-    int ans = n;
+    int ans = -1;
     while(low <= high){
         int mid = low + (high-low)/2;
-        if(arr[mid] >= tar){
-            ans = mid; 
-            high=mid-1;
+        if(arr[mid] <= tar){
+            ans = arr[mid]; 
+            low=mid+1;
         }
         else {
-            low=mid+1;
+            high=mid-1;
         }
     }
     return ans;
